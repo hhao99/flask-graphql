@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - demo</title>
+      {% else %}
+      <title>Welcome to flask</title>
+      {% endif %}
+    </head>
+    <body>
+        <img src="{{ url_for('static',filename='flask.png')}}" />
+        <div>Microblog: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
